@@ -2,13 +2,7 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row class="first-row">
     <span>Receipts Reader</span>
-    <button class="login-button" mat-raised-button>Login</button>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <i class="material-icons">face</i>
+    <a [routerLink]="'/login'" class="login-button" mat-raised-button>Login</a>
   </mat-toolbar-row>
 </mat-toolbar>
 

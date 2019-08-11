@@ -1,1 +1,18 @@
-<p>login works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Login</span>
+    <span class="example-spacer"></span>
+    <i class="material-icons">face</i>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="login-container">
+  <mat-form-field>
+    <input matInput placeholder="Email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password" [formControl]="password" required>
+    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+  </mat-form-field>
+  <button mat-button color="primary">Register</button>
+</div>
