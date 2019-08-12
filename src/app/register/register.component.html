@@ -5,14 +5,18 @@
     <i class="material-icons">face</i>
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="login-container">
+<div class="register-container">
   <mat-form-field>
     <input matInput placeholder="Email" [formControl]="email" required>
     <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Password" [formControl]="password" required>
+    <input matInput placeholder="Password" [formControl]="password" type="password" required>
     <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
   </mat-form-field>
-  <button mat-button color="primary">Login</button>
+  <mat-form-field>
+    <input matInput placeholder="Password" [formControl]="password2" type="password" required>
+    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword2()}}</mat-error>
+  </mat-form-field>
+  <button mat-button color="primary">Register</button>
 </div>
